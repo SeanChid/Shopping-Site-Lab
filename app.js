@@ -44,6 +44,7 @@ app.get('/add-to-cart/:animalId', (req, res) => {
   // - increment the count for that animal id by 1
   // - redirect the user to the cart page
   const sess = req.session
+  // req.params.animalId allows 'animalId' to be a placeholder parameter
   const animalId = req.params.animalId
   if (!sess.cart) {
     sess.cart = {}
